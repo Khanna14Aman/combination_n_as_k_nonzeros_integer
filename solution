@@ -1,0 +1,22 @@
+#include<iostream>                //n-1 c k-1(combinactories can be used)
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n,k;
+	cout<<"\nenter value of n and k";
+	cin>>n>>k;
+	n=n-1;
+	k=k-1;
+	int i;
+	int num=1,den=1,b=min(k,n-k);
+	for(i=1;i<=b;i++)
+	{                                 
+		den = den*i;
+		num = num*(n-i+1);
+	}
+	cout<<(num/den)<<"\n";
+
+
+	return 0;
+}
